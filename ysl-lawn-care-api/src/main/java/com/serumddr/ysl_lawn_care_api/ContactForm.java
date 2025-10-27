@@ -11,6 +11,10 @@ public class ContactForm {
     private String questions;
     private String website; // Honeypot field
 
+    private String[] method;
+    private String[] time;
+    private String[] interest;
+
     // --- Getters and Setters (Required for Spring) ---
 
     // Getter for fName
@@ -71,5 +75,30 @@ public class ContactForm {
     // Setter for honeypot field
     public void setWebsite(String website) {
         this.website = website;
+    }
+
+    // --- Getters and Setters for Checkbox Arrays ---
+    public String[] getMethod() {
+        return method;
+    }
+
+    public void setMethod(String[] method) {
+        this.method = method;
+    }
+
+    public String[] getTime() {
+        return time;
+    }
+
+    public void setTime(String[] time) {
+        this.time = time;
+    }
+
+    public String[] getInterest() {
+        return interest;
+    }
+
+    public void setInterest(String[] interest) {
+        this.interest = interest;
     }
 }
