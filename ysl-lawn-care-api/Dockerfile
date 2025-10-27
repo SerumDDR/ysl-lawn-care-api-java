@@ -1,5 +1,5 @@
 # Stage 1: Build the Java application
-FROM maven:3.9.1-amazoncorretto-21-al2023 AS build
+FROM maven:21-jdk-slim AS build 
 WORKDIR /app
 # Copy the pom.xml file first to cache dependencies
 COPY pom.xml .
@@ -10,7 +10,7 @@ COPY src ./src
 RUN mvn clean install -DskipTests
 
 # Stage 2: Create the final image (minimal size for deployment)
-FROM amazoncorretto:21-alpine-jdk
+FROM eclipse-temurin:21-jre-alpine 
 WORKDIR /app
 # Copy the built JAR file from the 'build' stage
 COPY --from=build /app/target/*.jar app.jar
