@@ -9,15 +9,11 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-// Import your other classes
-import com.serumddr.ysl_lawn_care_api.ContactForm;
-import com.serumddr.ysl_lawn_care_api.EmailService;
-
 
 @RestController 
 @RequestMapping("/api") 
 // **CORS FIX:** Allows your Netlify site to talk to this API
-@CrossOrigin(origins = {"https://ysl-lawn-care.netlify.app"}) 
+@CrossOrigin(origins = {"https://ysl-lawn-care.netlify.app", "http://localhost:3000"}) 
 public class ContactController {
 
     @Autowired 
