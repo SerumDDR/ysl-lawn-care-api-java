@@ -1,4 +1,4 @@
-package com.serumddr.ysllawncare; // NOTE: The package name must match your folder structure
+package com.serumddr.ysl_lawn_care_api; // NOTE: The package name must match your folder structure
 
 // A class to hold the data sent from the contact form
 public class ContactForm {
