@@ -10,6 +10,7 @@ public class ContactForm {
     private String phone;
     private String questions;
     private String website; // Honeypot field
+    private String reference;
 
     private String[] method;
     private String[] time;
@@ -75,6 +76,16 @@ public class ContactForm {
     // Setter for honeypot field
     public void setWebsite(String website) {
         this.website = website;
+    }
+
+    // Getter for reference
+    public String getReference() {
+        return reference;
+    }
+
+    // Setter for reference
+    public void setReference(String reference) {
+        this.reference = reference;
     }
 
     // --- Getters and Setters for Checkbox Arrays ---
