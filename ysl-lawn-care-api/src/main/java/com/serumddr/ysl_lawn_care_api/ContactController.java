@@ -47,7 +47,7 @@ public class ContactController {
         // --- Validation Check ---
         if (form.getFName() == null || form.getFName().trim().isEmpty() ||
             form.getLName() == null || form.getLName().trim().isEmpty() ||
-            form.getEmail() == null || form.getEmail().trim().isEmpty()
+            form.getEmail() == null || form.getEmail().trim().isEmpty() ||
             form.getPhone() == null || form.getPhone().trim().isEmpty() ) 
         {
             return new ResponseEntity<>("Please fill in all required fields.", HttpStatus.BAD_REQUEST);
@@ -64,7 +64,7 @@ public class ContactController {
             
         } catch (Exception e) {
             System.err.println("Email sending failed: " + e.getMessage());
-            e.printStackTrace(); // Print full stack trace for detailed error
+            e.printStackTrace(); // Print full stack trace for detailed errorgit
             
             // Error response (HTTP 500 Internal Server Error)
             return new ResponseEntity<>("There was an error sending your message. Please try again later.", HttpStatus.INTERNAL_SERVER_ERROR);
