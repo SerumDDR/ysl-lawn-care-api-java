@@ -5,9 +5,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 // A class to hold the data sent from the contact form
 public class ContactForm {
 
-    //  the 'name' attributes in your HTML form fields
+//  the 'name' attributes in your HTML form fields
+    @JsonProperty("fName")
     private String fName;
+    
+    @JsonProperty("lName")
     private String lName;
+    
     private String email;
     private String phone;
     private String questions;
