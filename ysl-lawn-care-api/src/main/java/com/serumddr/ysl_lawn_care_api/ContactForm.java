@@ -1,9 +1,11 @@
-package com.serumddr.ysl_lawn_care_api; // NOTE: The package name must match your folder structure
+package com.serumddr.ysl_lawn_care_api;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 // A class to hold the data sent from the contact form
 public class ContactForm {
 
-    // These names MUST match the 'name' attributes in your HTML form fields (camelCase convention)
+    //  the 'name' attributes in your HTML form fields
     private String fName;
     private String lName;
     private String email;
@@ -16,7 +18,7 @@ public class ContactForm {
     private String[] time;
     private String[] interest;
 
-    // --- Getters and Setters (Required for Spring) ---
+    // --- Getters and Setters ---
 
     // Getter for fName
     public String getFName() {
@@ -64,7 +66,7 @@ public class ContactForm {
     }
 
     // Setter for questions
-    public void setQuestions(String questions) { // Corrected: removed 'void' return type in setter
+    public void setQuestions(String questions) {
         this.questions = questions;
     }
 
